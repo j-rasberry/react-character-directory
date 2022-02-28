@@ -1,0 +1,23 @@
+.character-card-wrapper{
+    display:flex;
+    flex-direction: column;
+    /* background:black; */
+    width: 300px;
+    height:500px;
+
+
+   
+    
+    border-radius: 9px   ;
+
+}
+
+.character-card-image{
+    border-radius: 9px 9px 0 0  ;
+
+width:100%;
+object-fit: cover;
+}
+.character-card-info{
+    overflow: hidden;
+}

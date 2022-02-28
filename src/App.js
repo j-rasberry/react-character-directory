@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+import Home from "./pages/Home";
+import Discover from './pages/Discover'
+import Header from "./components/Global/Header";
+
+import './Global.css'
+import CreateCharacter from "./pages/CreateCharacter";
+import EditCharacter from "./pages/EditCharacter";
+import Login from "./pages/LoginSystem/Login";
+import SignUp from "./pages/LoginSystem/SignUp";
+import Dashboard from './pages/Dashboard'
+import PasswordReset from './pages/LoginSystem/PasswordReset'
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header/>
+      <Routes>
+        {/* public facing */}
+        <Route path="/" element={<Home />} />
+        <Route path="/discover" element={<Discover />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/password-reset" element={<PasswordReset />} />
+        <Route path="/sign-up" element={<SignUp />} />
+           {/* private pages */}
+           <Route path="/dashboard" element={<Dashboard />} />
+           <Route path="/create-character" element={<CreateCharacter />} />
+        <Route path="/edit-character" element={<EditCharacter />} />
+
+      </Routes>
     </div>
   );
 }
-
-export default App;
