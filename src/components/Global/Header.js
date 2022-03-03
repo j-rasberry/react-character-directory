@@ -10,15 +10,20 @@ import UserUtils from './UserUtils';
 const Header = () => {
     return (
         <div className='header-wrapper '>
-            
-            <h1 className='header-title'>Character Directory</h1>
-            <Link to='/'> <img className='header-logo' src={Logo}alt='logo'/></Link>
+            <div className='header-info'>
+                <h1 className='header-title'>Character Directory</h1>
+                <Link to='/'> <img className='header-logo' src={Logo}alt='logo'/></Link>
+            </div>
+            <div>
+            <Link className='nav-button' to="/discover">Discover</Link>
+            <Link className='nav-button' to="/create-character">Create</Link>
+
+            </div>
             <nav>        
-                  <Link to="/discover">Discover</Link>
       
+                  {!Userfront.accessToken() ? <UserUtils isLoggedIn= {true}/> : <UserUtils isLoggedIn= {false}/>}
 
             </nav>
-        {!Userfront.accessToken() ? <UserUtils isLoggedIn= {true}/> : <UserUtils isLoggedIn= {false}/>}
         </div>
     );
 }

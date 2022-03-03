@@ -6,16 +6,23 @@ import Discover from './pages/Discover'
 import Header from "./components/Global/Header";
 
 import './Global.css'
-import CreateCharacter from "./pages/CreateCharacter";
-import EditCharacter from "./pages/EditCharacter";
+
 import Login from "./pages/LoginSystem/Login";
 import SignUp from "./pages/LoginSystem/SignUp";
-import Dashboard from './pages/Dashboard'
 import PasswordReset from './pages/LoginSystem/PasswordReset'
+
+import CreateCharacter from "./pages/CreateCharacter";
+import EditCharacter from "./pages/EditCharacter";
+import Dashboard from './pages/Dashboard'
+import Profile from './pages/ProfilePages/Profile'
+import AccountSettings from './pages/ProfilePages/AccountSettings'
 
 export default function App() {
   return (
     <div className="App">
+           <link rel="preconnect" href="https://fonts.googleapis.com"/>
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+           <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet"></link>
         <Header/>
       <Routes>
         {/* public facing */}
@@ -28,6 +35,10 @@ export default function App() {
            <Route path="/dashboard" element={<Dashboard />} />
            <Route path="/create-character" element={<CreateCharacter />} />
         <Route path="/edit-character" element={<EditCharacter />} />
+        <Route path="/profile" element={<Profile />} />
+
+        <Route path="/account-settings" element={<AccountSettings />} />
+
 
       </Routes>
     </div>

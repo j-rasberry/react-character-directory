@@ -3,7 +3,7 @@ const app = express()
 const cors = require('cors');
 const jwt = require('jsonwebtoken')
 const port = 3001
-const {publickey} = require('./env')
+//const {publickey} = require('./env')
 require('dotenv').config();
 
 console.log(process.env.SERVERHOST)
