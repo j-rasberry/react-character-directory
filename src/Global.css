@@ -6,3 +6,15 @@ body,h1{
     margin:0;
     padding:0;
 }
+
+body{
+    height:100vh;
+}
+#root{
+    height:100%;
+}
+.App{
+    height:100%;
+    display:grid;
+    grid-template-rows: 100px 1fr;
+}

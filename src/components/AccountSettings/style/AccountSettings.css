@@ -1,0 +1,31 @@
+.account-settings-wrapper{
+    display:grid;
+    grid-template-columns: 15em 2fr;
+    grid-template-rows: 100%;
+    
+    height: 100%;
+
+  
+}
+.account-settings-sidebar-wrapper{
+    background:red;
+    padding: 20px;
+   
+
+}
+.account-settings-main-content-wrapper{
+    padding: 20px;
+
+}
+
+.sidebar-link-list li{
+    list-style-type: none;
+}
+.sidebar-link-list li:hover{
+    text-decoration: underline;
+}
+.sidebar-link-list li:active{
+color:white;}
+br{
+    border:1px solid black;
+}
